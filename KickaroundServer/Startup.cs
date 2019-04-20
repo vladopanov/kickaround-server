@@ -69,6 +69,11 @@ namespace KickaroundServer
                         ValidateIssuer = false,
                         ValidateAudience = false
                     };
+                })
+                .AddFacebook(options =>
+                {
+                    options.AppId = appSettings.FacebookAppId;
+                    options.AppSecret = appSettings.FacebookAppSecret;
                 });
 
             // configure DI for application services
